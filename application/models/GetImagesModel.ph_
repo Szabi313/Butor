@@ -1,0 +1,11 @@
+<?php
+class GetImagesModel extends CI_Model{
+	
+	function __construct(){
+		parent::__construct();
+		
+		$this->load->database();
+	}
+	
+	// INSERT INTO butor_product (name, img, subcategoryID) VALUES ('új', 'qw', 1) ON DUPLICATE KEY UPDATE name='új', img='qw', subcategoryID=1
+}

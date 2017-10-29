@@ -1,0 +1,143 @@
+@import (reference) "butor-mixins.less";
+
+//@import (reference) "bootstrap";
+//@import (reference) "mixins";
+
+@base-color:	#f5f1de;
+@chocolate:		#673a25; //#562b17;
+@address:		#9e9a88;
+
+@header-title-height: 100px;
+@header-title-padding: 10px;
+
+
+html, body{
+	background-color: @base-color;
+	height: 100%;
+}
+
+
+/*.center-block{
+	display:block;
+	margin-left:auto;
+	margin-right: auto;
+}*/
+
+
+.my-inside{
+	//.center-block();
+	.centered-col();
+}
+
+
+#butor-header{
+	background-color: @base-color;
+	background-image: url(../images/header-bck.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: right top;
+	height:235px;
+}
+
+#butor-header h1{
+	font-family: 'Passion One', cursive;
+	font-size: 51px;
+	color: @chocolate;
+	text-shadow: 3px 3px 3px @base-color;
+}
+
+#butor-header h3{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	color: lighten(@chocolate, 20%); //@address;
+	margin:0;
+	text-shadow: 1px 1px 2px @base-color;
+	left: 10px;
+}
+
+
+#butor-header h1, #butor-header h3{
+	position: relative;
+	top: (-1*(@header-title-height / 2 - @header-title-padding));
+	//left: @header-title-padding;
+}
+
+
+#header-title{
+	width: 300px;
+	margin:10px 0 0;
+}
+
+#header-title-in{
+	border-radius: 10px;
+	background-color: @base-color;
+	opacity: 0.5;
+	height:@header-title-height;
+	position: relative;
+	left: (-1 * @header-title-padding);
+	top: (@header-title-height - 2.5 * @header-title-padding);
+}
+
+
+#butor-news img{
+	max-width: 75% !important;
+	height: auto;
+}
+
+
+@media screen and (min-width:@screen-md){
+	#butor-header h1{
+		font-size: 65px;
+		top:-80px;
+		left: 50px;
+	}
+	
+	#butor-header h3{
+		top:-80px;
+		left: 76px;
+		font-size: 28px;
+	}
+	
+	#header-title{
+		margin:0;
+	}
+}
+
+@media screen and (min-width:@screen-lg){
+	#butor-header h1{
+		font-size: 75px;
+		top:-80px;
+		letter-spacing: 3px;
+	}
+	
+	#butor-header h3{
+		top:-80px;
+		font-size: 32px;
+		width: 324px;
+		left: 90px;	
+	}
+	
+	#header-title{
+		margin:0;
+	}
+}
+	
+@media screen and (min-width:@screen-xl){
+	#butor-header h1{
+		font-size: 100px;
+		top:-80px;
+		letter-spacing: 6px;
+	}
+	
+	#butor-header h3{
+		top:-80px;
+		font-size: 38px;
+		width: 400px;
+		left: 120px;
+	}
+	
+	#header-title{
+		margin:0;
+		height: 200px;
+	}
+}

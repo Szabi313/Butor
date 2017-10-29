@@ -1,0 +1,148 @@
+@import (reference) "butor-header.less";
+@import (reference) "butor-mixins.less";
+
+
+#butor-top-menu-container-fluid, #butor-top-menu-collapse{
+	padding-left: 0;
+	padding-right: 0;
+}
+
+
+#menu, #footer{
+	#gradient > .vertical(lighten(@chocolate, 20%); @chocolate);
+	height:60px;
+}
+
+#footer{
+	margin: @box-margin 0 0;
+}
+
+
+#menu ul{
+	margin:10px 0 0;
+	display: block;
+}
+
+
+#menu li{
+	margin-left: 2.7%;
+	
+}
+
+
+/*#menu li:first-child{
+	margin-left: 0;
+	
+}*/
+
+
+#menu li a{
+	color:#fff;
+	font-size:16px;
+}
+
+#menu li a:hover, .nav>li>a:focus{
+	color:@chocolate;
+	background-color:@base-color;
+}
+
+
+.navbar-default{
+	background-color:transparent;
+	border-color:transparent;
+	position:relative;
+}
+
+
+#menu{
+	position: relative;
+	z-index:1000;
+}
+
+
+.navbar-collapse.in{
+	background-color:@chocolate;
+	opacity:0.9;
+	border:none;
+}
+
+
+.navbar-collapse.in li{
+	width:92%;
+	padding:3px 0;
+}
+
+
+.my_nav{
+	padding:0;
+	border:none;
+	.centered-col();
+}
+
+
+
+@media screen and (min-width:@screen-sm){
+	#menu ul{
+		display: block;
+		margin:10px 0 0;
+	}
+	
+	#menu li{
+		margin-left: 2.7%;
+	}
+	
+	
+	#menu li:first-child{
+		margin-left: 0;
+	}
+}
+
+
+
+
+
+@media screen and (min-width:@screen-md){
+	#menu ul{
+		display: block;
+		margin:10px 0 0;
+	}
+	
+	#menu li{
+		margin-left: 6.8%;
+	}
+
+	#menu li:first-child{
+		margin-left: 0;
+	}
+}
+
+@media screen and (min-width:@screen-lg){
+	#menu ul{
+		display: block;
+		margin:-2px 0 0;
+	}
+	
+	#menu li{
+		margin-left: 6.8%;
+	}
+	
+	#menu li:first-child{
+		margin-left: 0;
+	}
+}
+
+@media screen and (min-width:@screen-xl){
+	#menu ul{
+		display: block;
+		margin:10px 0 0;
+	}
+	
+	#menu li{
+		margin-left: 8%;
+	}
+	
+	#menu li:first-child{
+		margin-left: 0;
+	}
+}
+

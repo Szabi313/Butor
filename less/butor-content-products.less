@@ -1,0 +1,57 @@
+@import (reference) "butor-mixins.less";
+
+
+
+#butor-content .container-fluid{
+	background-color: #fff;
+	padding:1em;
+}
+
+
+
+
+
+#butor-content .navbar-header{
+	width:100%;
+}
+
+/*#butor-content .navbar-brand, #butor-content h3{
+		background-color: @chocolate !important;
+		color: #fff !important;
+		font-size: @font-size-h3;
+}*/
+
+#butor-content .navbar-brand{
+		display:block;
+		width:100%;
+		margin-left:0;
+}
+
+
+.butor-caption{
+	height:50px;
+	padding:15px;
+	margin:@box-margin 0 0;
+	background-color: @chocolate !important;
+	color: #fff !important;
+	font-size: @font-size-h3;
+	line-height:29px;
+}
+
+
+#content-products{
+	margin-top: @box-margin;
+	//.centered-col();
+}
+
+.centered-column{
+	//.centered-col();
+}
+
+
+@media (min-width: @screen-md){
+	.centered-column{
+		width: @screen-md;
+	}
+}
+

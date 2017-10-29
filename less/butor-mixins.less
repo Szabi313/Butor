@@ -1,0 +1,51 @@
+@import (reference) "variables.less";
+
+@box-background: #fff;
+@box-margin: 40px;
+
+@big-img-padding: 3em;
+
+@screen-xl: 1300px;
+
+html, body{
+	color:@chocolate;
+}
+
+a{
+	color:lighten(@chocolate, 20%);
+}
+
+a:hover{
+	color:@chocolate;
+}
+
+.white-box-no-padding{
+	//padding:0;
+	background-color: @box-background;
+}
+
+.white-box-no-padding-header{
+	margin:0;
+	padding:0.5em;
+	background-color: @chocolate;
+	color: @box-background;
+}
+
+
+
+
+.centered-col{
+	float:none;
+	margin: 0 auto;
+}
+	
+
+
+	
+	
+
+/*@media (max-width: @screen-md){
+	.centered-col{
+		width: @screen-md;
+	}
+}*/

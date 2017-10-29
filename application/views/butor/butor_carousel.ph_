@@ -1,0 +1,10 @@
+<div class="container-fluid" id="slide">
+	<div class="row">
+		<div class="col-lg-10 col-lg-offset-1 col-md-12 col-sm-12">
+			<div id="screen">
+				<img src="<?php echo base_url();?>images/slide-1.jpg">
+				<h1>Szekrénysorok</h1>
+			</div>
+		</div>
+	</div>
+</div>
