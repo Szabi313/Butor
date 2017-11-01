@@ -217,9 +217,9 @@ $(document).ready(function(){
  **************** FELIRATKOZÁS ***********************************************
  */
  
-	$("#submit-button").click(function(e){
+	$(".submit-button").click(function(e){
 		
-		//console.log($("#subscribe-name").val());
+		console.log(this);
 		
 		if(!$("#subscribe-name").val() || !$("#subscribe-email").val())alert("A név és az e-mail mező kitöltése kötelező")
 		else{
