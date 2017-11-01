@@ -219,7 +219,7 @@ $(document).ready(function(){
  
 	$(".submit-button").click(function(e){
 		
-		console.log(this.parent());
+		console.log($(this).parent());
 		
 		if(!$("#subscribe-name").val() || !$("#subscribe-email").val())alert("A név és az e-mail mező kitöltése kötelező")
 		else{
