@@ -219,26 +219,26 @@ $(document).ready(function(){
  
 	$(".submit-button").click(function(e){
 		
-		console.log($(this).parent());
+		console.log($(this).parent().find("#subscribe-name"));
 		
-		if(!$("#subscribe-name").val() || !$("#subscribe-email").val())alert("A név és az e-mail mező kitöltése kötelező")
+		if(!$(this).parent().find("#subscribe-name").val() || !$(this).parent().find("#subscribe-email").val())alert("A név és az e-mail mező kitöltése kötelező")
 		else{
 			
 			//if($("#subscribe-email").val().indexOf('@') < 0 || $("#subscribe-email").val().indexOf('.') < 0)alert("Nem megfelelő az e-mail cím");
 		//	if(!/[\w\.]+@[\w]+\.[\w]+/.test($("#subscribe-email").val()))alert("Nem megfelelő az e-mail cím");
-			if(!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test($("#subscribe-email").val()))alert("Nem megfelelő az e-mail cím");
+			if(!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test($(this).parent().find("#subscribe-email").val()))alert("Nem megfelelő az e-mail cím");
 
 			else{
-				$("#loading2").css({'display':'block'});
+				$(this).parent().find("#loading2").css({'display':'block'});
 				$.post('http://butorstudiogalgaheviz.hu/lista/uj/butor_mail', 
-					{name: $("#subscribe-name").val(),
-					email: $("#subscribe-email").val()},
+					{name: $(this).parent().find("#subscribe-name").val(),
+					email: $(this).parent().find("#subscribe-email").val()},
 					function(data, status){
 						if(status=="success"){
 							console.log(status);
-							$("#subscribe-name").val('');
-							$("#subscribe-email").val('');
-							$("#loading2").css({'display':'none'});
+							$(this).parent().find("#subscribe-name").val('');
+							$(this).parent().find("#subscribe-email").val('');
+							$(this).parent().find("#loading2").css({'display':'none'});
 							alert("Adatok sikeresen elmentve");
 						}
 						else alert("Probléma adódott az adatok mentésekor");
