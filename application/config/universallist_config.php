@@ -62,3 +62,10 @@ $config['butor_mail'] = "Hírlevélre feliratkozók";
 
 
 $config['NO_WORKER_IN_DB'] = "MÉG NEM VITTEK FEL DOLGOZÓT A DOLGOZÓ-NYILVÁNTARTÁSBA! Előbb töltse fel az osztályának a dolgozói adatbázisát!";
+
+
+/*
+ * BEJELNTKEZÉSI MEGKÖTÉS ALÓL KIVÉTEL TÁBLÁK
+ */
+ 
+ $config['user_access_exception_table'] = "butor_mail";

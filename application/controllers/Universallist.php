@@ -48,7 +48,9 @@ class Universallist extends CI_Controller{
 	public function index($table = NULL, $itemID=NULL, $isUpdate=FALSE, $alternateForm=NULL){
 		
 		
-		if(!$this->user_model->checkUserLoginAndAccess( /*"universallist/ul_list" */ $this->uri->uri_string(), get_class($this), false))return ;
+		if($table != $this->config->item('user_access_exception_table')){
+			if(!$this->user_model->checkUserLoginAndAccess( /*"universallist/ul_list" */ $this->uri->uri_string(), get_class($this), false))return ;
+		}
 		
 	//	var_dump($data['imgs']);
 		
