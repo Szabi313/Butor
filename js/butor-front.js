@@ -219,25 +219,28 @@ $(document).ready(function(){
  
 	$(".submit-button").click(function(e){
 		
-		console.log($(this).parent().find("#subscribe-name").val());
+		//console.log($(this).parent().find("#subscribe-name").val());
 		
-		if(!$(this).parent().find("#subscribe-name").val() || !$(this).parent().find("#subscribe-email").val())alert("A név és az e-mail mező kitöltése kötelező")
+		var formName = $(this).parent().find("#subscribe-name"),
+		formEmail = $(this).parent().find("#subscribe-email");
+		
+		if(!formName.val() || !formEmail.val())alert("A név és az e-mail mező kitöltése kötelező")
 		else{
 			
 			//if($("#subscribe-email").val().indexOf('@') < 0 || $("#subscribe-email").val().indexOf('.') < 0)alert("Nem megfelelő az e-mail cím");
 		//	if(!/[\w\.]+@[\w]+\.[\w]+/.test($("#subscribe-email").val()))alert("Nem megfelelő az e-mail cím");
-			if(!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test($(this).parent().find("#subscribe-email").val()))alert("Nem megfelelő az e-mail cím");
+			if(!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(formEmail.val()))alert("Nem megfelelő az e-mail cím");
 
 			else{
 				$(".loading2").css({'display':'block'});
 				$.post('http://butorstudiogalgaheviz.hu/lista/uj/butor_mail', 
-					{name: $(this).parent().find("#subscribe-name").val(),
-					email: $(this).parent().find("#subscribe-email").val()},
+					{name: formName.val(),
+					email: formEmail.val()},
 					function(data, status){
 						if(status=="success"){
 							console.log(status);
-							$(this).parent().find("#subscribe-name").val('');
-							$(this).parent().find("#subscribe-email").val('');
+							formName.val('');
+							formEmail.val('');
 							$(".loading2").css({'display':'none'});
 							alert("Adatok sikeresen elmentve");
 						}
