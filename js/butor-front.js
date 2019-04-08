@@ -3,7 +3,7 @@ $(document).ready(function(){
 	//console.log("valami");
 
 	var store = window.localStorage;
-	const cookieBrief = '<div style="position: fixed; bottom: 0; width: 100%, height: 25%; padding: 10px; background-color: #f5f1de; border-top: 1px solid #673a25; z-index: 9999">Ez az oldal cookie-kat használ. Ha az oldalon böngészik, akkor elfogadja, hogy a személyre szabott, maradéktalan minőségű tartalom érdekében az oldal cookie-k segítségét vegye igénybe.<a href="<?php echo base_url();?>butorstudio/cookie-tajekoztato">További információk</a><button id="cookieBrief" class="btn btn-default" style="margin-left: 25px"><span>Értem</span></button></div>'
+	const cookieBrief = '<div style="position: fixed; bottom: 0; width: 100%, height: 25%; padding: 10px; background-color: #f5f1de; border-top: 1px solid #673a25; z-index: 9999">Ez az oldal cookie-kat használ. Ha az oldalon böngészik, akkor elfogadja, hogy a személyre szabott, maradéktalan minőségű tartalom érdekében az oldal cookie-k segítségét vegye igénybe.<a href="http://butorstudiogalgaheviz.hu/butorstudio/cookie-tajekoztato"> További információk</a><button id="cookieBrief" class="btn btn-default" style="margin-left: 25px"><span>Értem</span></button></div>'
 
 	if(!store.getItem('cookieAccepted'))$('body').append(cookieBrief);
 	
