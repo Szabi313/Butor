@@ -1,48 +1,4 @@
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<script src='https://cdn.tinymce.com/4/tinymce.min.js'></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-tinymce/0.0.18/tinymce.min.js"></script>
-
-
-
-
-<script src="<?php echo base_url();?>js/butor-angular.js"></script>
-
-<!-- <script src="<?php //echo base_url();?>js/butor-admin-light.js"></script> -->
-<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/ul.css"></link>
-
-<!-- <script>
- // tinymce.init({
- //   selector: '.mytextarea',
-//	mode : "specific_textareas",
-    //editor_selector : "mceEditor"
-//	plugins:	["link","autolink","image", "searchreplace", "lists", "advlist", "code"],
-//  });
-  </script> -->
-<!-- <meta charset="utf8"> -->
-
 <?php 
-
-
-//   if(isset($field_list))var_dump($field_list);
-//   echo "<br><br><br>";
-
-
-
-//  if(isset($itemToEdit))var_dump($itemToEdit);
-//  echo "<br><br><br>";
-
-
-//  if(isset($categories))var_dump($categories);
-//  echo "<br><br><br>";
-
-
-// if(isset($categories_fields))var_dump($categories_fields);
-// echo "<br><br><br>";
-
 
 echo validation_errors();
 
@@ -140,5 +96,16 @@ if(isset($error_message))echo $error_message;
 
 </div>
 <?php endif;?>
+
+<script>
+    tinymce.init({
+      selector: 'textarea',
+      plugins: 'a11ychecker advcode casechange formatpainter linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tinycomments tinymcespellchecker',
+      toolbar: 'a11ycheck addcomment showcomments casechange checklist code formatpainter pageembed permanentpen table',
+      toolbar_mode: 'floating',
+      tinycomments_mode: 'embedded',
+      tinycomments_author: 'Author name',
+   });
+  </script>
 
 

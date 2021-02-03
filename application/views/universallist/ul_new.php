@@ -1,22 +1,6 @@
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<script src='https://cdn.tinymce.com/4/tinymce.min.js'></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 <script src="<?php echo base_url();?>js/butor-admin.js"></script>
-<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/ul.css"></link>
 
-<script>
-  tinymce.init({
-    selector: '.mytextarea',
-	mode : "specific_textareas",
-    //editor_selector : "mceEditor"
-	relative_urls : false,
-	remove_script_host : false,
-	convert_urls : true,
-	plugins:	["link","autolink","image", "searchreplace", "lists", "advlist", "code"],
-  });
-  </script>
-<!-- <meta charset="utf8"> -->
 
 <?php 
 
@@ -120,4 +104,14 @@ if(isset($error_message))echo $error_message;
 </div>
 <?php endif;?>
 
+<script>
+    tinymce.init({
+      selector: 'textarea',
+      plugins: 'a11ychecker advcode casechange formatpainter linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tinycomments tinymcespellchecker',
+      toolbar: 'a11ycheck addcomment showcomments casechange checklist code formatpainter pageembed permanentpen table',
+      toolbar_mode: 'floating',
+      tinycomments_mode: 'embedded',
+      tinycomments_author: 'Author name',
+   });
+  </script>
 

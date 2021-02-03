@@ -82,8 +82,10 @@ class Universallist extends CI_Controller{
 			//$data['imgs'] = get_filenames('content/images');
 			if($alternateForm)$form=$alternateForm;
 			else $form = 'ul_new';
+			$this->load->view("universallist/ul_header");
 			$this->load->view("universallist/ul_menu");
 			$this->load->view('universallist/'.$form, $data);
+			$this->load->view("universallist/ul_footer");
 		}
 		else $this->saveNew($table);
 	
@@ -152,8 +154,10 @@ class Universallist extends CI_Controller{
 		
 		if($this->form_validation->run() === false){
 			//$data['imgs'] = get_filenames('content/images');
+			$this->load->view("universallist/ul_header");
 			$this->load->view("universallist/ul_menu");
 			$this->load->view('universallist/ul_new', $data);
+			$this->load->view("universallist/ul_footer");
 		}
 		else $this->updateItem($table, $itemToEdit=NULL);
 	}
@@ -302,9 +306,11 @@ class Universallist extends CI_Controller{
 		
 		
 		//if($this->config->item('list_view_Universallist') == $this->uri->segment(2)){
-			$this->load->view("universallist/attaches");
+			//$this->load->view("universallist/attaches");
+			$this->load->view("universallist/ul_header");
 			$this->load->view("universallist/ul_menu");
 			$this->load->view("universallist/ul_list", $this->data);
+			$this->load->view("universallist/ul_footer");
 		//}
 		
 		//return $this->data;
