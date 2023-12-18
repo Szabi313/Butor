@@ -5,7 +5,7 @@ var butorApp = angular.module('butorModule', ['ui.tinymce'])
 	//console.log($scope.valami);
 	
 	$scope.config = {
-		protocol: "http://",
+		protocol: "https://",
 		//domain: "localhost/butor-php/",
 		//domain: "butorstudiogalgaheviz.hu/uj_oldal/",
 		domain: "butorstudiogalgaheviz.hu/",
