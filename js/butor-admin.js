@@ -134,7 +134,7 @@
 							$('#no-select').after('<div class="dirBox"><p>'+index+'</p></div>')
 						}
 						else {
-							$('#imgContainer').append('<div class="imgBox"><img src="http://butorstudiogalgaheviz.hu/content/images/'+path+item+'"><p>'+item+'</p></div>');
+							$('#imgContainer').append('<div class="imgBox"><img src="https://butorstudiogalgaheviz.hu/content/images/'+path+item+'"><p>'+item+'</p></div>');
 						}
 					});
 				
@@ -152,7 +152,7 @@
 				
 				
 				
-				$.get('http://butorstudiogalgaheviz.hu/kepek', function(data, status){
+				$.get('https://butorstudiogalgaheviz.hu/kepek', function(data, status){
 					
 					//console.log(data);
 					
